@@ -10,7 +10,7 @@ top: 0;
 left: 0;
 width: 100%;
 padding: 1rem 0;
-background: var(--dark-bg);
+background: teal;
 ul {
   max-width: 1200px;
   margin: 0 auto;
