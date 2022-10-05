@@ -1,9 +1,10 @@
 import React from 'react'
+import BlogsSection from '../Components/BlogsSection'
 
 export default function Blogs() {
   return (
     <div>
-        <h1>Blogs go Here</h1>
+       <BlogsSection />
     </div>
   )
 }
