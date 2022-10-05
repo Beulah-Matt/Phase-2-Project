@@ -45,7 +45,7 @@ const HeroSecStyle = styled.div
 }
 
 @media only screen and (max-width: 768px) {
-    .h__heading {
+    .hero__heading {
       font-size: 1.4rem;
       margin-bottom: -3rem;
       .h__title {

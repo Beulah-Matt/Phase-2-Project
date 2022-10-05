@@ -13,7 +13,7 @@ line-height: 1.3em;
 
 function DescriptionText({children}) {
   return (
-    <TextStyle>
+    <TextStyle className= 'paragraph'>
         <p>{children}</p>
     </TextStyle>
   )

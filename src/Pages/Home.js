@@ -1,9 +1,15 @@
 import React from 'react'
+import HeroSection from '../Components/HeroSection'
+import AboutSection from '../Components/AboutSection'
+import BlogsSection from '../Components/BlogsSection'
+
 
 export default function Home() {
   return (
     <div>
-        <h1>This is my Home Page</h1>
+        <HeroSection />
+        <AboutSection />
+        <BlogsSection />
     </div>
   )
 }
