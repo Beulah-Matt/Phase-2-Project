@@ -5,6 +5,8 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
+import Write from "./Components/Write";
+
 function App() {
   return (
     <>
@@ -16,6 +18,9 @@ function App() {
         </Route>
         <Route path='/blogs'>
           <Blogs />
+        </Route>
+        <Route path='/write'>
+          <Write />
         </Route>
         <Route path='/contact'>
           <Contact />

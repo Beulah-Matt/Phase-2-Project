@@ -110,13 +110,13 @@ export default function NavBarMenu() {
         </div>
         <li>
             <NavLink 
-            to= '/' exact
+        to= '/' exact
             onKeyDown={()=> setNavShowing(!navShowing)}
             onClick= {()=> setNavShowing(!navShowing)}
             role ="button"
             tabIndex={0}
             > Home 
-            </NavLink>
+            </NavLink>    
         </li>
         <li>
             <NavLink 
@@ -136,6 +136,15 @@ export default function NavBarMenu() {
             role ="button"
             tabIndex={0}
             > Blogs </NavLink>
+        </li>
+        <li>
+            <NavLink 
+        to= '/write' exact
+            onKeyDown={()=> setNavShowing(!navShowing)}
+            onClick= {()=> setNavShowing(!navShowing)}
+            role ="button"
+            tabIndex={0}
+            > Write  </NavLink>    
         </li>
         <li>
             <NavLink 
