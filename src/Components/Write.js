@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import {MdAdd} from "react-icons/md"
-
-const WriteStyles= styled.div
-`
+const WriteStyles = styled.div`
 .write {
     padding-top: 50px;
   }
   .writeImg {
     margin-left: 150px;
-    width: 70vw;
+    width: 68.7vw;
     height: 280px;
     border-radius: 10px;
     object-fit: cover;
@@ -22,17 +19,17 @@ const WriteStyles= styled.div
     display: flex;
     align-items: center;
   }
-   .writeIcon {
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-    border: 1px solid;
-    border-radius: 50%;
+  .customUrl {
+    position: absolute;
+    top: -30px;
+    right: 50px;
     color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
   }
   .writeInput {
     background-color: rgb(208, 201, 201);
@@ -48,7 +45,7 @@ const WriteStyles= styled.div
     outline-style: none;
   }
   .writeText {
-    width: 70vw;
+    width: 68.7vw;
     height: 100vh;
     font-family: communist;
     font-size: 20px;
@@ -65,11 +62,18 @@ const WriteStyles= styled.div
     cursor: pointer;
     display: flex;
     align-items: center;
+  
 `;
 
-
 function Write() {
-    //User should add a photo when they click on the add button, URL
+  const [blogData, setBlogData] = useState();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(blogData);
+    setBlogData();
+  };
+
+  //User should add a photo when they click on the add button, URL
   return (
     <WriteStyles>
       <div className="write">
@@ -78,25 +82,40 @@ function Write() {
           src="https://i.postimg.cc/htjKhmRT/marcel-strauss-fzqxo-FJyti-E-unsplash.jpg"
           alt=""
         />
-        <form className="writeForm">
+        <form className="writeForm" onSubmit={handleSubmit}>
           <div className="writeFormGroup">
-            <label htmlFor="fileInput">
-              <div className="writeIcon"><MdAdd /></div>
-            </label>
-            <input id="fileInput" type="file" style={{ display: "none" }} />
             <input
               className="writeInput"
               placeholder="Title"
               type="text"
               autoFocus={true}
+              name= 'title'
+              value={blogData}
+              onChange={event => setBlogData(event.target.value)}
             />
           </div>
+          <div className="writeFormGroup">
+            <input
+              className="customUrl"
+              placeholder="Custom image URL"
+              type="text"
+              required="required"
+              autoFocus={true}
+              name= 'image'
+              value={blogData}
+              onChange={event => setBlogData(event.target.value)}
+            />
+          </div>
+
           <div className="writeFormGroup">
             <textarea
               className="writeInput writeText"
               placeholder="Tell your story..."
               type="text"
               autoFocus={true}
+              name= 'body'
+              value={blogData}
+              onChange={event => setBlogData(event.target.value)}
             />
           </div>
           <button className="writeSubmit" type="submit">

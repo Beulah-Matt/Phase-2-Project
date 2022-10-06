@@ -5,6 +5,7 @@ import BlogItem from './BlogItem';
 import styled from 'styled-components';
 import SwiperCore, {Navigation} from 'swiper'
 import 'swiper/swiper-bundle.min.css'
+//import Write from './Write';
 
 SwiperCore.use([Navigation])
 
@@ -93,7 +94,6 @@ console.log(blogPosts);
                         if (index >= 5) return null;
                         return(
                             <SwiperSlide key={blogPost.id}>
-                                {/* <BlogItem  title= {blogPost.title} body= {blogPost.body} image={blogPost.image}/> */}
                                 <BlogItem blogPost = {blogPost} />
                             </SwiperSlide>
                         )
