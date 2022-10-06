@@ -4,12 +4,12 @@ import AboutSection from '../Components/AboutSection'
 import BlogsSection from '../Components/BlogsSection'
 
 
-export default function Home() {
+export default function Home({blogPosts}) {
   return (
     <div>
         <HeroSection />
         <AboutSection />
-        <BlogsSection />
+        <BlogsSection blogPosts={blogPosts}/>
     </div>
   )
 }

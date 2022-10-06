@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { MdSearch } from 'react-icons/md';
 import styled from 'styled-components'
-// import BlogItem from '../Components/BlogItem';
+ import BlogItem from '../Components/BlogItem';
 import Titles from '../Components/Titles'
 // import BlogsSection from '../Components/BlogsSection'
 
@@ -33,11 +33,16 @@ padding: 10rem 0;
 
 `;
 
-export default function Blogs() {
+export default function Blogs({blogPosts}) {
   // Loop through all blog items and display them here using the Blog item component
   //Add search functionality to this page
 
 const [search, setSearch] = useState('');
+
+const handleChange = (event)=>{
+  event.preventDefault();
+  setSearch(event.target.value)
+}
 
   return (
     <BlogStyles>
@@ -46,14 +51,18 @@ const [search, setSearch] = useState('');
         <div className="blogSearchBar">
           <form>
             <input type="text" 
-            
+            value={search}
+            onChange={handleChange}
+            placeholder='article title'
             />
             <MdSearch className='searchIcon'/>
           </form>
         </div>
         <div className="allBlogs">
-
-          {/* <BlogItem /> */}
+          {blogPosts.map((blogPost)=> {
+            return <BlogItem blogPost={blogPost}/>
+          })}
+          
           {/* <BlogsSection /> */}
         </div>
       </div>

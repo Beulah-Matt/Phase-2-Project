@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Titles from './Titles'
 import { Swiper, SwiperSlide} from 'swiper/react';
 import BlogItem from './BlogItem';
 import styled from 'styled-components';
 import SwiperCore, {Navigation} from 'swiper'
 import 'swiper/swiper-bundle.min.css'
-//import Write from './Write';
+//import Blogs from '../Pages/Blogs';
+// import Write from './Write';
+
 
 SwiperCore.use([Navigation])
 
@@ -56,15 +58,9 @@ padding: 10rem 0;
 }
 `;
 
-function BlogsSection() {
-const [blogPosts, setBlogPosts]= useState([])
+function BlogsSection({blogPosts}) {
 
-useEffect(()=>{
-    fetch('http://localhost:3000/blogPosts')
-    .then(res => res.json())
-    .then(blogPost => setBlogPosts(blogPost))
-}, [])
-console.log(blogPosts);
+//console.log(blogPosts);
  
   return (
     <BlogSectionStyling>
@@ -95,6 +91,7 @@ console.log(blogPosts);
                         return(
                             <SwiperSlide key={blogPost.id}>
                                 <BlogItem blogPost = {blogPost} />
+                                {/* <Blogs blogPost = {blogPost} setBlogPosts={setBlogPosts} /> */}
                             </SwiperSlide>
                         )
                     })}

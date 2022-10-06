@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 const WriteStyles = styled.div`
 .write {
@@ -65,13 +65,27 @@ const WriteStyles = styled.div`
   
 `;
 
-function Write() {
-  const [blogData, setBlogData] = useState();
+function Write({setBlogPosts}) {
+  
+  const title = useRef()
+  const imageUrl = useRef()
+  const story= useRef()
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(blogData);
-    setBlogData();
+    setBlogPosts((prevBlogs)=>[...prevBlogs, {id: prevBlogs.length, title: title.current.value, body: story.current.value, image: imageUrl.current.value}])
+
+    //Do your post here
+
+    title.current.value= ''
+    story.current.value= ''
+    imageUrl.current.value=''
+    
   };
+
+  
+//Get previous value of blogs, then spread the previous value of blogs
+//Put new blog data
 
   //User should add a photo when they click on the add button, URL
   return (
@@ -90,8 +104,8 @@ function Write() {
               type="text"
               autoFocus={true}
               name= 'title'
-              value={blogData}
-              onChange={event => setBlogData(event.target.value)}
+              ref= {title}
+              
             />
           </div>
           <div className="writeFormGroup">
@@ -102,8 +116,7 @@ function Write() {
               required="required"
               autoFocus={true}
               name= 'image'
-              value={blogData}
-              onChange={event => setBlogData(event.target.value)}
+              ref={imageUrl}
             />
           </div>
 
@@ -114,8 +127,7 @@ function Write() {
               type="text"
               autoFocus={true}
               name= 'body'
-              value={blogData}
-              onChange={event => setBlogData(event.target.value)}
+              ref={story}
             />
           </div>
           <button className="writeSubmit" type="submit">

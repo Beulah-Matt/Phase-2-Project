@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useEffect, useState}from "react";
 import NavBarMenu from "./Components/NavBarMenu"
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./Pages/Home";
@@ -8,6 +8,15 @@ import Contact from "./Pages/Contact";
 import Write from "./Components/Write";
 
 function App() {
+
+  const [blogPosts, setBlogPosts]= useState([])
+
+  useEffect(()=>{
+      fetch('http://localhost:3000/blogPosts')
+      .then(res => res.json())
+      .then(blogPost => setBlogPosts(blogPost))
+  }, []) 
+
   return (
     <>
     <Router>
@@ -17,16 +26,16 @@ function App() {
           <About />
         </Route>
         <Route path='/blogs'>
-          <Blogs />
+          <Blogs blogPosts={blogPosts}/>
         </Route>
         <Route path='/write'>
-          <Write />
+          <Write setBlogPosts= {setBlogPosts}/>
         </Route>
         <Route path='/contact'>
           <Contact />
         </Route>
         <Route path='/'>
-          <Home />
+          <Home blogPosts={blogPosts} />
         </Route>
        </Switch>     
     </Router>
