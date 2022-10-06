@@ -1,28 +1,34 @@
 {
-    "blogPosts":[
-        {
-            "id":1,
-            "title":"Welcome to the new blog",
-            "body":"Mental Health issues are increasingly a part of our modern society. Mental health is affected by a wide variety of internal and external factors, as well as how our brain is “wired”. Too much stress and too much anxiety (unfortunately all too common these days) can ultimately lead to mental health conditions which can interfere with our capacity to lead life the way we would like. The levels of stress and anxiety within is as individuals can fluctuate wildly in response to the news and current events, challenges in earning a living, challenges in our social and work relationships, and so on, can seriously impact our behavioral health",
-            "image":"https://i.postimg.cc/3rmpx14D/image1.jpg"
-        },
-        {
-            "id":2,
-            "title":"Know your stressors",
-            "body":"In response to increasing mental health awareness, some of us are managing to reduce our levels of stress by working at home more; others are finding working at home more a source of stress in itself, because of social isolated, or a noisy environment that is not conducive to being productive. If we are not careful, our ways of trying to handle stress can simply serve to bring us other types of stress.",
-            "image":"https://i.postimg.cc/0N4mbH07/image2.jpg"
-        },
-        {
-            "id":3,
-            "title":"How to get help",
-            "body":"People often don’t get the mental health help they need because they don’t know where to start. Use these resources to find the help you, your friends, or family need.",
-            "image":"https://i.postimg.cc/3N5vZ46R/image3.jpg"
-        },
-        {
-            "id":4,
-            "title":"This is the end of the world",
-            "body":"1 in 5 Americans will experience a mental illness in a given year.1 in 5 children, either currently or at some point during their life, have had a seriously debilitating mental illness.1 in 25 Americans lives with a serious mental illness, such as schizophrenia, bipolar disorder, or major depression.",
-            "image":"https://i.postimg.cc/Z5T6gNqv/image4.jpg"
-        }
-    ]
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "Welcome to the new blog",
+      "body": "Mental Health issues are increasingly a part of our modern society. Mental health is affected by a wide variety of internal and external factors, as well as how our brain is “wired”. Too much stress and too much anxiety (unfortunately all too common these days) can ultimately lead to mental health conditions which can interfere with our capacity to lead life the way we would like.",
+      "image": "https://i.postimg.cc/3rmpx14D/image1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Know your stressors",
+      "body": "In response to increasing mental health awareness, some of us are managing to reduce our levels of stress by working at home more; others are finding working at home more a source of stress in itself, because of social isolated, or a noisy environment that is not conducive to being productive. If we are not careful, our ways of trying to handle stress can simply serve to bring us other types of stress.",
+      "image": "https://i.postimg.cc/0N4mbH07/image2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "How to get help",
+      "body": "People often don’t get the mental health help they need because they don’t know where to start. Use these resources to find the help you, your friends, or family need.",
+      "image": "https://i.postimg.cc/3N5vZ46R/image3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "This is the end of the world",
+      "body": "1 in 5 Americans will experience a mental illness in a given year.1 in 5 children, either currently or at some point during their life, have had a seriously debilitating mental illness.1 in 25 Americans lives with a serious mental illness, such as schizophrenia, bipolar disorder, or major depression.",
+      "image": "https://i.postimg.cc/Z5T6gNqv/image4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Life is Beautiful",
+      "body": "Life can be a truly exciting adventure. But sometimes, there are those days, weeks, or even months, during which the going gets exceptionally tough. Life may confront you with trials and tribulations; it may push you to the ground and will leave you with the impression that all hope is gone. During these times of great difficulty, life will throw daunting challenges and larger-than-life obstacles at you.",
+      "image": "https://i.postimg.cc/65vzHCHC/komarov-egor-8ao367y-Me-F8-unsplash.jpg"
+    }
+  ]
 }

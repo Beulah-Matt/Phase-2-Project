@@ -1,3 +1,5 @@
+
+
 import React,{ useEffect, useState}from "react";
 import NavBarMenu from "./Components/NavBarMenu"
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
@@ -44,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
