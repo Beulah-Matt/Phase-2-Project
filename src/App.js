@@ -26,7 +26,7 @@ function App() {
           <About />
         </Route>
         <Route path='/blogs'>
-          <Blogs blogPosts={blogPosts}/>
+          <Blogs blogPosts={blogPosts} setBlogPosts= {setBlogPosts}/>
         </Route>
         <Route path='/write'>
           <Write setBlogPosts= {setBlogPosts}/>

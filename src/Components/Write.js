@@ -80,14 +80,12 @@ function Write({setBlogPosts}) {
     title.current.value= ''
     story.current.value= ''
     imageUrl.current.value=''
-    
+
   };
 
   
 //Get previous value of blogs, then spread the previous value of blogs
-//Put new blog data
-
-  //User should add a photo when they click on the add button, URL
+//Put new blog 
   return (
     <WriteStyles>
       <div className="write">

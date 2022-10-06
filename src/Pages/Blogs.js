@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdSearch } from 'react-icons/md';
 import styled from 'styled-components'
  import BlogItem from '../Components/BlogItem';
@@ -30,18 +30,42 @@ padding: 10rem 0;
 .blogSearchBar .searchIcon path {
   color: #7393B3 ;
 }
-
+@media only screen and (max-width: 768px) {
+  .blogSearchBar,
+  .blogSearchBar form,
+  .blogSearchBar input {
+    width: 100%;
+  }
+}
+.allBlogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 5rem;
+  margin-top: 5rem;
+}
 `;
 
-export default function Blogs({blogPosts}) {
+export default function Blogs({blogPosts, setBlogPosts}) {
   // Loop through all blog items and display them here using the Blog item component
   //Add search functionality to this page
 
 const [search, setSearch] = useState('');
+//take in a function and a dependency
+//The dependency is the blogposts, specifies when I want to  run the search
+useEffect(()=>{
+  if (search==='')return;
+  setBlogPosts(()=>
+  blogPosts.filter((blog)=>blog.title.toLowerCase().match(search.toLowerCase())))
+},[search]);
+
 
 const handleChange = (event)=>{
   event.preventDefault();
   setSearch(event.target.value)
+  //Making sure you go to all blogs after search
+  if (!event.target.value.length>0){
+    setBlogPosts(blogPosts)
+  }
 }
 
   return (
@@ -62,8 +86,6 @@ const handleChange = (event)=>{
           {blogPosts.map((blogPost)=> {
             return <BlogItem blogPost={blogPost}/>
           })}
-          
-          {/* <BlogsSection /> */}
         </div>
       </div>
     </BlogStyles>
