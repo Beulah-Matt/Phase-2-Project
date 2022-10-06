@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { MdSearch } from 'react-icons/md';
 import styled from 'styled-components'
- import BlogItem from '../Components/BlogItem';
+import BlogItem from '../Components/BlogItem';
 import Titles from '../Components/Titles'
-// import BlogsSection from '../Components/BlogsSection'
 
 const BlogStyles = styled.div
 `
@@ -71,7 +70,7 @@ const handleChange = (event)=>{
   return (
     <BlogStyles>
       <div className="container">
-        <Titles title='Articles' subtitle='Enjoy reading this'/> 
+        <Titles title='Articles' subtitle='Happy Reading'/> 
         <div className="blogSearchBar">
           <form>
             <input type="text" 
