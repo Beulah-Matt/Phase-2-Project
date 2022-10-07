@@ -2,7 +2,6 @@ import React from 'react'
 import Button from './Button'
 import DescriptionText from './DescriptionText'
 import Titles from './Titles'
-import aboutImg from '../Fonts-Images/images/aboutImg.jpg'
 import styled from 'styled-components'
 
 const AboutSectionStyles = styled.div
@@ -89,7 +88,7 @@ function AboutSection() {
                 </div>
             </div>
             <div className="aboutSection-right">
-                <img src={aboutImg} alt='https://unsplash.com/photos/TgpWr5YI7Ls'/>
+                <img src='https://i.postimg.cc/tRw3SGXs/aboutImg.jpg' alt='https://unsplash.com/photos/TgpWr5YI7Ls'/>
             </div>
         </div>
     </AboutSectionStyles>
