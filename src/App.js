@@ -14,7 +14,7 @@ function App() {
   const [blogPosts, setBlogPosts]= useState([])
 
   useEffect(()=>{
-      fetch('http://localhost:3000/blogPosts')
+      fetch('https://phase-2-project-backend-beulah.herokuapp.com/blogPosts')
       .then(res => res.json())
       .then(blogPost => setBlogPosts(blogPost))
   }, []) 

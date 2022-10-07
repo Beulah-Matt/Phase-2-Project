@@ -1,9 +1,9 @@
 Project Name: Phase 2 Full React Project.
 App Name: Mentality
 Creator: Beulah Mathenge.
-Links: -Github Backend: https://github.com/Beulah-Matt/phase-2-backend
+Links: -Github Backend: https://phase-2-project-backend-beulah.herokuapp.com/blogPosts
        -Github Project repository: https://github.com/Beulah-Matt/Phase-2-Project
-       -Github pages: 
+       -Vercel pages: https://phase-2-project-bay.vercel.app/
 
 This project started about two weeks before I joined Moringa, as a gift to a friend who is championing mental health in Kenya and wanted a customised blog site. Though it is far from being a workable presentation, I hope to finally get it there soon.
 

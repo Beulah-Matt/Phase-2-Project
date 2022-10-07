@@ -78,7 +78,7 @@ const handleChange = (e)=>{
 
 const handleSubmit =(e)=>{
   e.preventDefault();
-  fetch(' http://localhost:3000/blogPosts', {
+  fetch(' https://phase-2-project-backend-beulah.herokuapp.com/blogPosts', {
     method: "POST",
     headers: {
       Accept: "application/json",
