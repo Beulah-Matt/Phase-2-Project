@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import HeroPhoto from '../Fonts-Images/images/HeroPhoto.png'
 import Button from './Button'
 import DescriptionText from './DescriptionText'
 
@@ -71,7 +70,7 @@ function HeroSection() {
                 <span className='hero__title'> Mentality</span>
              </h1>
              <div className="h__image">
-                <img src={HeroPhoto} alt='mental health' />
+                <img src='https://i.postimg.cc/zv0W6Hwn/Hero-Photo.png' alt='mental health' />
              </div>
             <div className="blogInfo">
                 <DescriptionText > 

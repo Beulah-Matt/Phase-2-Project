@@ -31,7 +31,7 @@ function App() {
           <Blogs blogPosts={blogPosts} setBlogPosts= {setBlogPosts}/>
         </Route>
         <Route path='/write'>
-          <Write setBlogPosts= {setBlogPosts}/>
+          <Write blogPosts={blogPosts} setBlogPosts= {setBlogPosts}/>
         </Route>
         <Route path='/contact'>
           <Contact />

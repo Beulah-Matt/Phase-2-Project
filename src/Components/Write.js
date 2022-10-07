@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 const WriteStyles = styled.div`
 .write {
@@ -65,25 +65,34 @@ const WriteStyles = styled.div`
   
 `;
 
-function Write({setBlogPosts}) {
+function Write({blogPosts, setBlogPosts}) {
   
-  const title = useRef()
-  const imageUrl = useRef()
-  const story= useRef()
+const [blogInfo, setBlogInfo]= useState({
+  title: '',
+  body: '',
+  image:''
+})
+const handleChange = (e)=>{
+  setBlogInfo({...blogInfo, [e.target.name]: e.target.value})
+}
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setBlogPosts((prevBlogs)=>[...prevBlogs, {id: prevBlogs.length, title: title.current.value, body: story.current.value, image: imageUrl.current.value}])
-
-    //Do your post here
-
-    title.current.value= ''
-    story.current.value= ''
-    imageUrl.current.value=''
-
-  };
-
-  
+const handleSubmit =(e)=>{
+  e.preventDefault();
+  fetch(' http://localhost:3000/blogPosts', {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(blogInfo),
+  })
+  .then(resp=> resp.json())
+  .then((data)=>{
+    const newBlog = [...blogPosts, data]
+    setBlogPosts(newBlog)
+  })
+  e.target.reset()
+}
 //Get previous value of blogs, then spread the previous value of blogs
 //Put new blog 
   return (
@@ -102,7 +111,8 @@ function Write({setBlogPosts}) {
               type="text"
               autoFocus={true}
               name= 'title'
-              ref= {title}
+              //ref= {title}
+              onChange={handleChange}
               
             />
           </div>
@@ -114,7 +124,8 @@ function Write({setBlogPosts}) {
               required="required"
               autoFocus={true}
               name= 'image'
-              ref={imageUrl}
+              //ref={imageUrl}
+              onChange={handleChange}
             />
           </div>
 
@@ -125,7 +136,8 @@ function Write({setBlogPosts}) {
               type="text"
               autoFocus={true}
               name= 'body'
-              ref={story}
+              //ref={story}
+              onChange={handleChange}
             />
           </div>
           <button className="writeSubmit" type="submit">
