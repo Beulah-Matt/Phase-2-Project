@@ -1,11 +1,11 @@
 Project Name: Phase 2 Full React Project.
 App Name: Mentality
 Creator: Beulah Mathenge.
-Links: -Github Backend: https://phase-2-project-backend-beulah.herokuapp.com/blogPosts
+Links: -Backend: https://phase-2-project-backend-beulah.herokuapp.com/blogPosts
        -Github Project repository: https://github.com/Beulah-Matt/Phase-2-Project
        -Vercel pages: https://phase-2-project-bay.vercel.app/
 
-This project started about two weeks before I joined Moringa, as a gift to a friend who is championing mental health in Kenya and wanted a customised blog site. Though it is far from being a workable presentation, I hope to finally get it there soon.
+This project is a prototype for a blog, where a user can pen down their best ideas and share them with a willing audience. I chose a blog to incorporate writing and tech, two things I am passionate about. With fine tuning, this could potentially be hosted by a user in any of the blogging providers like Wordpress.
 
 #Components
 I have created several components, most of them for re-usability. The title and sub-title components for example will be used throughout all of the sections of this website. App.js is the parent component and renders props to the rest that need them.
@@ -15,8 +15,8 @@ All items on the NavBar will lead to a specific page, utilizing react routes for
 
 #User Experience
 As a user, these are some of the features:
--Click on the Article button to read more articles while the read more button leads you to the about section.
--You can edid and post blog posts from the Write page.
+-Click on the Article button to read more articles while the Read More button leads you to the about section.
+-You can edit and post blog posts from the Write page.
 -Search for blogs by title.
 -Browse through some of the available blogs from home page.
 -Send a message to the author.
