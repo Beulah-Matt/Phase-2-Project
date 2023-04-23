@@ -1,7 +1,7 @@
 Project Name: Phase 2 Full React Project.
 App Name: Mentality
 Creator: Beulah Mathenge.
-Links: -Backend: https://phase-2-project-backend-beulah.herokuapp.com/blogPosts
+Links: -Backend: https://blogposts-rehs.onrender.com/blogPosts
        -Github Project repository: https://github.com/Beulah-Matt/Phase-2-Project
        -Vercel pages: https://phase-2-project-bay.vercel.app/
 
