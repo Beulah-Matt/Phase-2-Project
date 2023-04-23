@@ -14,7 +14,7 @@ function App() {
   const [blogPosts, setBlogPosts]= useState([])
 
   useEffect(()=>{
-      fetch('https://phase-2-project-backend-beulah.herokuapp.com/blogPosts')
+      fetch('https://blogposts-rehs.onrender.com/blogPosts')
       .then(res => res.json())
       .then(blogPost => setBlogPosts(blogPost))
   }, []) 
